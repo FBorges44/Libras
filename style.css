@@ -1,0 +1,208 @@
+/* ===================== RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f4f8, #e3e9ef);
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===================== CONTAINER ===================== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===================== HEADER ===================== */
+.header {
+  background: #004b23;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header .btn.small {
+  background: white;
+  color: #004b23;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.header .btn.small:hover {
+  background: #cde9d6;
+}
+
+/* ===================== CARDS ===================== */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-header h2 {
+  margin-top: 0.5rem;
+  font-size: 1.8rem;
+  color: #004b23;
+}
+
+.card-content {
+  margin-top: 1rem;
+}
+
+/* ===================== BOTÕES ===================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #004b23;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: #00733e;
+}
+
+.btn.green-blue {
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.btn.green-blue:hover {
+  background: linear-gradient(135deg, #16a085, #138d75);
+}
+
+.btn.blue-purple {
+  background: linear-gradient(135deg, #4a69bd, #6a89cc);
+}
+
+.btn.blue-purple:hover {
+  background: linear-gradient(135deg, #3c5aa6, #4a69bd);
+}
+
+/* ===================== GRID ===================== */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.three-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.four-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .two-cols, .three-cols, .four-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================== ALFABETO ===================== */
+.letter-card {
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.letter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.letter {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #004b23;
+}
+
+.letter-card video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ===================== DICIONÁRIO ===================== */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  padding: 6px;
+}
+
+.word-card {
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.word-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.word-card h4 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.word-card video {
+  width: 100%;
+  border-radius: 10px;
+}

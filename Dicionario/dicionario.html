@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicionário de Palavras - IFPI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <i data-lucide="book" class="icon purple"></i>
+        <h1>Dicionário de Palavras</h1>
+      </div>
+      <a href="index.html" class="btn small">⬅ Voltar</a>
+    </div>
+  </header>
+
+  <main class="container main">
+    <div class="card">
+      <div class="card-content">
+        <h2>Busque e aprenda sinais</h2>
+
+        <!-- Barra de Pesquisa -->
+        <div class="search-bar">
+          <input type="text" placeholder="Pesquisar palavra..." id="searchInput">
+          <i data-lucide="search"></i>
+        </div>
+
+        <!-- Lista de Palavras -->
+        <div id="wordList" class="grid three-cols">
+          <div class="word-card">
+            <h4>Amor</h4>
+            <video controls>
+              <source src="videos/palavras/amor.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="word-card">
+            <h4>Escola</h4>
+            <video controls>
+              <source src="videos/palavras/escola.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="word-card">
+            <h4>Família</h4>
+            <video controls>
+              <source src="videos/palavras/familia.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    lucide.createIcons();
+
+    // Filtro de pesquisa
+    const searchInput = document.getElementById("searchInput");
+    const wordList = document.getElementById("wordList");
+
+    searchInput.addEventListener("keyup", function() {
+      let filter = searchInput.value.toLowerCase();
+      let words = wordList.getElementsByClassName("word-card");
+
+      for (let i = 0; i < words.length; i++) {
+        let title = words[i].getElementsByTagName("h4")[0].innerText.toLowerCase();
+        words[i].style.display = title.includes(filter) ? "" : "none";
+      }
+    });
+  </script>
+</body>
+</html>
